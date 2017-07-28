@@ -70,7 +70,9 @@ nav li {
   padding: 5px;
   margin-top: 5px;
   width: 100px;
-  word-break: break-word;
+  word-break: break-all;
+  word-wrap: break-word;
+
 }
 
 .menu input {
