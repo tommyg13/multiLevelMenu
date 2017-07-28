@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Multi Level Menu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="navContainer">
+  <div class="show">
+  <div class="bar1"></div>
+  <div class="bar2"></div>
+  <div class="bar3"></div>    
+  </div>
+  <nav>
+    <ul class="dropMenu">
+      <!--  nav link-->
+      <!-- to add more simple links just add an a li item  with className of dropLink and an anchor -->
+      <li class="dropLink"><a href="/">Link</a></li>
+      <!--  simple dropDown-->
+        <!-- to create simple dropdown menu without levels create a parent li with class name of dropLink
+        an anchor with className of dropAnchor and a div with class menu with the anchors of className of
+        menuLink -->
+      <li class="dropLink">
+        <a href="#" class="dropAnchor">Drop down</a>
+        <div class="menu">
+          <a href="#" class="menuLink">link</a>
+          <a href="#" class="menuLink">link</a>
+          <a href="#" class="menuLink">link</a>
+        </div>
+      </li>
+
+      <!--  one level dropDown-->
+      <li class="dropLink">
+        <a href="#" class="dropAnchor">One level Drop down</a>
+        <div class="menu">
+          <a href="#" class="menuLink">link</a>
+        <!-- begining of level 1 -->
+
+        <!-- level 1 needs an ul element with className of level1 and an anchor of className
+        of level1Link -->
+          <ul class="level1">
+              <!-- to add another link on level 1 create a li with anchor of className level1Link -->
+            <li>
+              <a href="#" class="level1Link">Level 1</a>
+            </li>
+          </ul>
+        <!-- end of level 1 -->
+          <a href="#" class="menuLink">link</a>
+          <ul class="level1">
+            <li>
+              <a href="#" class="level1Link">Level 1</a>
+            </li>
+          </ul>
+        <!-- simple menu link withou Level -->
+          <a href="#" class="menuLink">link</a>
+        </div>
+      </li>
+
+
+      <!--  two levels dropDown-->
+      <li class="dropLink">
+        <a href="#" class="dropAnchor">Two levels Drop down</a>
+        <div class="menu">
+            <!-- link with levels -->
+          <a href="#" class="menuLink">link</a>
+          <!-- nested level 1 -->
+          <ul class="level1">
+            <li>
+              <a href="#" class="level1Link">Level 1</a>
+              <!-- for each level after level one create ul with class level -->
+              <ul class="level">
+                <li>
+                  <!-- to add more links create a li with an anchor of class anem menuLink                  -->
+                  <a href="#" class="menuLink">Level 2</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        <!-- end of level 1 -->
+          <a href="#" class="menuLink">link</a>
+          <ul class="level1">
+            <li>
+              <a href="#" class="level1Link">Level 1</a>
+              <ul class="level">
+                <li>
+                  <a href="#" class="menuLink">Level 2</a>
+                  <!-- if you want this link to have another level just create on line below
+                  an ul with className of level and a li item with an anchor of className of menuLink -->
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <a href="#" class="menuLink">link</a>
+        </div>
+      </li>
+
+
+      <!--  three levels dropDown-->
+      <li class="dropLink">
+        <a href="#" class="dropAnchor">Three levels Drop down</a>
+        <div class="menu">
+          <a href="#" class="menuLink">link</a>
+          <ul class="level1">
+           <!-- nested level 1  -->
+            <li>
+              <a href="#" class="level1Link">Level 1</a>
+
+              <ul class="level">
+                  <!-- level 2 which have an extra level -->
+                <li>
+                  <a href="#">Level 2</a>
+                  <!-- level 3 -->
+                  <ul class="level">
+                    <li>
+                      <a href="#" class="menuLink">Level 3</a>
+                    </li>
+                  </ul>
+                <!-- end of level 3 -->
+                </li>
+            <!-- end of level 2 -->
+              <!-- level 2 which have an extra level -->
+                <li>
+                  <a href="#">Level 2</a>
+                  <ul class="level">
+                    <li>
+                      <a href="#" class="menuLink">Level 3</a>
+                    </li>
+                  </ul>
+                </li>
+                <!-- end of level 2 -->
+            </ul>
+            <!-- end of level 1 -->
+            </li>
+          </ul>
+        <!-- link whith levels -->
+          <a href="#" class="menuLink">link</a>
+          <ul class="level1">
+            <li>
+              <a href="#" class="level1Link">Level 1</a>
+              <ul class="level">
+                <li>
+                  <a href="#" class="menuLink">Level 2</a>
+                  <ul class="level">
+                    <li>
+                      <a href="#" class="menuLink">Level 3</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        <!-- simple link -->
+          <a href="#" class="menuLink">link</a>
+        </div>
+      </li>
+
+
+      <!--  form dropDown-->
+      <li class="dropLink">
+        <a href="#" class="dropAnchor">Form Drop down</a>
+        <div class="menu">
+          <form>
+            Email:<br>
+            <input type="text" name="email"><br> Password:
+            <br>
+            <input type="password" name="password"></input><br>
+            <button>Submit</button>
+
+          </form>
+        </div>
+      </li>
+
+    </ul>
+  </nav>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>
